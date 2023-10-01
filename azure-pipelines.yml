@@ -25,6 +25,7 @@ steps:
     npm run build
     popd
   displayName: 'npm install and build'
+  workingDirectory: $(System.DefaultWorkingDirectory)
 - task: ArchiveFiles@2
   inputs:
     rootFolderOrFile: '$(uiBuild)'
